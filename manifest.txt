@@ -1,0 +1,22 @@
+---
+applications:
+  - name: ${NAME_APP}
+    language: nodejs
+    buildpacks:
+      - nodejs_buildpack
+    disk_quota: ${DISK}
+    memory: ${MEMORY}
+    timeout: ${TIME}
+    health-check-type: port
+    stack: cflinuxfs3
+    env:
+      CONTEXT_NAME: ${CONTEXT_NAME}
+      CONTEXT_VERSION: ${CONTEXT_VERSION}
+      LOG_LEVEL: ${LOG_LEVEL}
+      URI: ${URI}
+      SSL_SELF_SIGNED: ${SSL_SELF_SIGNED}
+      FTP_HOST: ${FTP_HOST}
+      FTP_USER: ${FTP_USER}
+      FTP_PASSWORD: ${FTP_PASSWORD}
+      FTP_PORT: ${FTP_PORT}
+      FTP_ROOT: ${FTP_ROOT}
